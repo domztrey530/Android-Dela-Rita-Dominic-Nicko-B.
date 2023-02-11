@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static  final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,5 +20,13 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "This is an info log.");
         Log.w(TAG, "This is a warm log.");
         Log.e(TAG, "This is an error log.");
+
+        Button button = (Button) findViewById(R.id.button4);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "Button 4 clicked");
+            }
+        });
     }
 }
