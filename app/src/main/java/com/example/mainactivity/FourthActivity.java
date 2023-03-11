@@ -13,12 +13,24 @@ public class FourthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
+
         Button fifthbutton = (Button) findViewById(R.id.button5);
+        Button sixthbutton = (Button) findViewById(R.id.button6);
+
         fifthbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(FourthActivity.this, ListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        sixthbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(FourthActivity.this, MainFrag.class);
                 startActivity(intent);
             }
         });
