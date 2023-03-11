@@ -24,8 +24,8 @@ public class ListActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.listview);
         listItem = getResources().getStringArray(R.array.array_technology);
-//        final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.myList, R.id.textView, listItem);
-//        listView.setAdapter(adapter);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mylist, R.id.textView, listItem);
+        listView.setAdapter(adapter);
 
 
     }
