@@ -2,9 +2,9 @@ package com.example.mainactivity;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 
 
 //import android.app.FragmentManager;
@@ -44,13 +44,13 @@ public class MainFrag extends AppCompatActivity
             }
         });
     }
-    private void loadFragment(Fragment fragment)
+    private static void loadFragment(Fragment fragment)
     {
-        FragmentManager fm = getSupportFragmentManager();
+        FragmentManager fm = fragment.getFragmentManager();
         FragmentTransaction fragmentTransaction= fm.beginTransaction();
 
-        FragmentTransaction.replace(R.id.frameLayout, fragment);
-        fragmentTransaction.commit();
+        FragmentTransaction fragmentTransaction1 = fm.beginTransaction();
+        fragmentTransaction1.replace(R.id.frameLayout, fragment);
 
 
     }
