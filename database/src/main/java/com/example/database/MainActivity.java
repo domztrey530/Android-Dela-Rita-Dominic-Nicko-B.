@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity
         //Get data
         getData();
 
+        //Update Data
+        dbHelper.updateData(2, "Sikoa", 22);
+        getData();
+
         //Delete Data
         dbHelper.deleteData(2);
 
